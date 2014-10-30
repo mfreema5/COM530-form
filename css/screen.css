@@ -49,22 +49,45 @@ main {                                                     /* Main - the main co
 }
 
 
+form {
+  display: block;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(195,215,230);
+}
+
 fieldset {
   display: block;
-  margin: 1em;
+  position: relative;
+  margin: 0.375em;
+  margin-top: -0.250em;   /* Negative because <legend> is riveted to <fieldset> border */
   padding: 2em;
   background-color: rgb(217,239,255);
 }
 
 legend {
-  display: inline-block;
-  font-size: 1.375em;
+  font-size: 1.250em;
+  line-height: 1.375em;
+  position: relative;
+  top: 0.875em;                     /* line-height * (2/3) , and rounded */
 }
 
-lable {
-  display: inline-block
-  font-size: 1.125em;
+label {
+  display: inline-block;
+  font-size: 1.000em;
 }
+
+                                            /* Lining things up */
+#user-account label  { width: 10em; }
+#user-name label     { width:  7em; }
+#user-mailing label  { width:  9em; }
+#user-billing label  { width:  9em; }
+#user-phone label    { width:  5em; }
+#user-stations label { width: 11em; }
+
+
+
+
 
 ul.li {
   list-style-type: none;
