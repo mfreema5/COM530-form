@@ -1,6 +1,9 @@
 #!/bin/bash
 #
-#  Calculate the “em-length” of a string.
+#  Usage:
+#        ./Em-length [string]
+#
+#  Calculates the “em-length” of a string.
 #  The em-length is how long a line of text will be
 #  based on the characters in it.
 #  This is how newspaper headlines were composed/sized
@@ -13,7 +16,6 @@
 #  Thus: ems are doubled to make them all integers.
 #  But they are divided by three to account for the
 #  height-vs-width discrepancy.
-
 #
 #  30-Oct-14
 #  MJF
