@@ -11,6 +11,74 @@
 
   </head>
 
-  <body></body>
+  <body>
+
+    <fieldset id="user-account">
+    <legend>Create login information:</legend>
+      <label for="user-email">Email address:</label>
+        <input type="email" id="user-email" />
+      <checkbox />
+      <checkbox />
+      <checkbox />
+      <label for="Dpassword">Create password:</label>
+        <input type="text" id="Dpassword" />
+      <label for="Spassword">Repeat password:</label>
+       <input type="text" id="Spassword" />
+    </fieldset>
+    <fieldset id="user-name">
+    <legend>Your profile:</legend>
+      <label for="mistress">Title:</label>
+        <select id="mistress" name="mistress-return"></select>
+      <label for="name-given">First name:</label>
+        <input type="text" id="name-given" />
+      <label for="name-m">Middle init.:</label>
+        <input type="text" id="name-m" />
+      <label for="name-family">Family name:</label>
+        <input type="text" id="name-family" />
+      <label for="junior-senior">Suffix:</label>
+        <select id="junior-senior" name="junior-senior-return"></select>
+    </fieldset>
+    <fieldset id="user-mailing">
+    <legend>Mailing address</legend>
+      <label for="mail-street-number">Address:</label>
+        <input type="text" id="mail-street-number" />
+      <label for="mail-unit-etc"></label>
+        <input type="text" id="mail-unit-etc" />
+      <label for="mail-city">City:</label>
+        <input type="text" id="mail-city" />
+      <label for="mail-state">State/Provence:</label>
+        <select id="mail-state" name="mail-state-return"></select>
+      <label for="mail-zipcode">Zip/Postal-code:</label>
+        <input type="text" id="mail-zipcode" />
+      <checkbox />
+    </fieldset>
+    <fieldset id="user-billing">
+    <legend>Billing address</legend>
+      <label for="bill-street-number">Address:</label>
+        <input type="text" id="bill-street-number" />
+      <label for="bill-unit-etc"></label>
+        <input type="text" id="bill-unit-etc" />
+      <label for="bill-city">City:</label>
+        <select id="bill-city" name="bill-city-return"></select>
+      <label for="bill-state">State/Provence:</label>
+        <input type="text" id="bill-state" />
+      <label for="bill-zipcode">Zip/Postal-code:</label>
+        <input type="text" id="bill-zipcode" />
+    </fieldset>
+    <fieldset id="user-phone">
+    <legend>Phone</legend>
+      <label for="phone-type">Type:</label>
+        <select id="phone-type" name="phone-type-return"></select>
+      <label for="phone-number">Number:</label>
+        <input type="tel" id="phone-number" />
+    </fieldset>
+    <fieldset id="user-stations">
+      <label for="Dstation">Departure station:</label>
+        <select id="Dstation" name="Dstation-return"></select>
+      <label for="Astation">Arrival station:</label>
+        <select id="Astation" name="Astation-return"></select>
+    </fieldset>
+
+  </body>
 
 </html>
