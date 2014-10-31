@@ -2,333 +2,337 @@
 <html lang="en">
 
   <head>
-    <title>Redesigned login form</title>
+    <title>Redesigned login/enrollment form for Amtrak Guest Rewards</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" media="screen,print" href="css/reset.css" />
     <link rel="stylesheet" href="css/formalize.css" />
     <link rel="stylesheet" href="css/screen.css" />
-<!--    <script src="jquery.formalize.js"></script>  -->
+    <link href='http://fonts.googleapis.com/css?family=Istok+Web&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <script src="css/modernizr.custom.99475.js"></script>
   </head>
   <body>
-    <form id="login" style="display: block;">
-      <h1>Amtrak Guest Rewards&reg;</h1>
-      <fieldset id="userpass">
-        <legend>Log in to your existing account:</legend>
-        <ul>
-          <li>
-            <label for="username">Username (email address):</label>
-            <input type="email" id="username" name="username" />
-          </li>
-          <li>
-            <label for="password">Current password:</label>
-            <input type="text" id="password" name="username" />
-          </li>
-        </ul>
-      </fieldset>
-      <div id="login-button">
-        <ul>
-          <li>
-            <button form="login" type="button" id="submit-login">SEND LOGIN</button>
-          </li>
-        </ul>
-      </div>
-    </form>
-    <form id="choose">
-      <ul>
-        <li>
-          <button form="choose" type="button" onclick="toggleElementDisplay('login');" id="gologin">GO TO LOGIN</button>
-        </li>
-        <li>
-          <button form="choose" type="button" onclick="toggleElementDisplay('enroll');" id="goenroll">GO TO ENROLL</button>
-        </li>
-      </ul>
-      <script>
-        function toggleElementDisplay (targetId) {
-          var targetBlock = document.getElementById(targetId);
-          targetBlock.style.display = ( targetBlock.style.display == 'none' ? 'block' : 'none' );
-        };
-      </script>
-    </form>
-    <form id="enroll"  style="display: none;">
-      <h1>Enroll with Amtrak Guest Rewards&reg;</h1>
-      <fieldset id="user-account">
-        <legend>Define login information:</legend>
-        <ul>
-          <li>
-            <label for="user-email">Email address:</label>
-            <input type="email" id="user-email" />
-          </li>
-          <li>
-            <label for="Dpassword">Create password:</label>
-            <input type="text" id="Dpassword" />
-          </li>
-          <li>
+    <header></header>
+    <main>
+      <form id="login" style="display: block;">
+        <fieldset id="userpass">
+          <legend>Log in to your existing account:</legend>
+          <ul>
             <li>
-            <label for="Spassword">Repeat password:</label>
-           <input type="text" id="Spassword" />
-          </li>
-        </ul>
-      </fieldset>
-      <fieldset id="user-name">
-        <legend>Your profile:</legend>
-        <ul>
-          <li>
-            <label for="mistress">Title:</label>
-            <select id="mistress" name="mistress-return">
-              <optgroup label="Title">
-                <option selected>&nbsp;</option>
-                <option>Dr.</option>
-                <option>Miss</option>
-                <option>Mr.</option>
-                <option>Mrs.</option>
-                <option>Ms.</option>
-              </optgroup>
-            </select>
-          </li>
-          <li>
-            <label for="name-first">First name:</label>
-            <input type="text" id="name-first" placeholder="Your given name" />
-          </li>
-          <li>
-            <label for="name-m">Middle init.:</label>
-            <input type="text" id="name-m" placeholder="."/>
-          </li>
-          <li>
-            <label for="name-last">Family name:</label>
-            <input type="text" id="name-last" placeholder="Your family name"/>
-          </li>
-          <li>
-            <label for="junior-senior">Suffix:</label>
-            <select id="junior-senior" name="junior-senior-return">
-              <optgroup label="Suffix">
-                <option value="" selected>&nbsp;</option>
-                <option value="sr">Sr.</option>
-                <option value="jr">Jr.</option>
-                <option value="iii">III</option>
-                <option value="iv">IV</option>
-              </optgroup>
-            </select>
-          </li>
-        </ul>
-      </fieldset>
-      <fieldset id="user-mailing">
-        <legend>Mailing address</legend>
-        <ul>
-          <li>
-            <label for="mail-street-number">Address:</label>
-            <input type="text" id="mail-street-number" />
-          </li>
-          <li>
-            <label for="mail-unit-etc"></label>
-            <input type="text" id="mail-unit-etc" />
-          </li>
-          <li>
-            <label for="mail-city">City:</label>
-            <input type="text" id="mail-city" />
-          </li>
-          <li>
-            <label for="mail-state">State/Provence:</label>
-            <select id="mail-state" name="mail-state-return">
-              <optgroup label="State/Province">
-                <option value="" selected>&nbsp;</option>
-                <option value="al">Alabama</option>
-                <option value="ak">Alaska</option>
-                <option value="az">Arizona</option>
-                <option value="ar">Arkansas</option>
-                <option value="ca">California</option>
-                <option value="co">Colorado</option>
-                <option value="ct">Connecticut</option>
-                <option value="de">Delaware</option>
-                <option value="dc">District of Columbia</option>
-                <option value="fl">Florida</option>
-                <option value="ga">Georgia</option>
-                <option value="hi">Hawaii</option>
-                <option value="id">Idaho</option>
-                <option value="il">Illinois</option>
-                <option value="in">Indiana</option>
-                <option value="ia">Iowa</option>
-                <option value="ks">Kansas</option>
-                <option value="ky">Kentucky</option>
-                <option value="la">Louisiana</option>
-                <option value="me">Maine</option>
-                <option value="md">Maryland</option>
-                <option value="ma">Massachusetts</option>
-                <option value="mi">Michigan</option>
-                <option value="mn">Minnesota</option>
-                <option value="ms">Mississippi</option>
-                <option value="mo">Missouri</option>
-                <option value="mt">Montana</option>
-                <option value="ne">Nebraska</option>
-                <option value="nv">Nevada</option>
-                <option value="nh">New Hampshire</option>
-                <option value="nj">New Jersey</option>
-                <option value="nm">New Mexico</option>
-                <option value="ny">New York</option>
-                <option value="nc">North Carolina</option>
-                <option value="nd">North Dakota</option>
-                <option value="oh">Ohio</option>
-                <option value="ok">Oklahoma</option>
-                <option value="or">Oregon</option>
-                <option value="pa">Pennsylvania</option>
-                <option value="ri">Rhode Island</option>
-                <option value="sc">South Carolina</option>
-                <option value="sd">South Dakota</option>
-                <option value="tn">Tennessee</option>
-                <option value="tx">Texas</option>
-                <option value="ut">Utah</option>
-                <option value="vt">Vermont</option>
-                <option value="va">Virginia</option>
-                <option value="wa">Washington</option>
-                <option value="wv">West Virginia</option>
-                <option value="wi">Wisconsin</option>
-                <option value="wy">Wyoming</option>
-                <option value="ab">Alberta</option>
-                <option value="bc">British Columbia</option>
-                <option value="mb">Manitoba</option>
-                <option value="nb">New Brunswick</option>
-                <option value="nl">Newfoundland</option>
-                <option value="nt">Northwest Territories</option>
-                <option value="ns">Nova Scotia</option>
-                <option value="nu">Nunavut</option>
-                <option value="on">Ontario</option>
-                <option value="pe">Prince Edward Island</option>
-                <option value="qc">Quebec</option>
-                <option value="sk">Saskatchewan</option>
-                <option value="yt">Yukon</option>
-              </optgroup>
-            </select>
-          </li>
-          <li>
-            <label for="mail-zipcode">Zip/Postal-code:</label>
-            <input type="text" id="mail-zipcode" placeholder="00000" />
-          </li>
-        </ul>
-      </fieldset>
-      <div id="address-checkbox">
-        <input type="checkbox" id="show-billing" name="show-billing" value="" checked>My billing address is the same as my mailing address.
-      </div>
-      <fieldset id="user-billing">
-        <legend>Billing address</legend>
-        <ul>
-          <li>
-            <label for="bill-street-number">Address:</label>
-            <input type="text" id="bill-street-number" />
-          </li>
-          <li>
-            <label for="bill-unit-etc"></label>
-            <input type="text" id="bill-unit-etc" />
-          </li>
-          <li>
-            <label for="bill-city">City:</label>
-            <input type="text" id="bill-city" />
-          </li>
-          <li>
-            <label for="bill-state">State/Provence:</label>
-            <select id="bill-state" name="bill-state-return" >
-              <optgroup label="State/Province">
-                <option value="" selected>&nbsp;</option>
-                <option value="al">Alabama</option>
-                <option value="ak">Alaska</option>
-                <option value="az">Arizona</option>
-                <option value="ar">Arkansas</option>
-                <option value="ca">California</option>
-                <option value="co">Colorado</option>
-                <option value="ct">Connecticut</option>
-                <option value="de">Delaware</option>
-                <option value="dc">District of Columbia</option>
-                <option value="fl">Florida</option>
-                <option value="ga">Georgia</option>
-                <option value="hi">Hawaii</option>
-                <option value="id">Idaho</option>
-                <option value="il">Illinois</option>
-                <option value="in">Indiana</option>
-                <option value="ia">Iowa</option>
-                <option value="ks">Kansas</option>
-                <option value="ky">Kentucky</option>
-                <option value="la">Louisiana</option>
-                <option value="me">Maine</option>
-                <option value="md">Maryland</option>
-                <option value="ma">Massachusetts</option>
-                <option value="mi">Michigan</option>
-                <option value="mn">Minnesota</option>
-                <option value="ms">Mississippi</option>
-                <option value="mo">Missouri</option>
-                <option value="mt">Montana</option>
-                <option value="ne">Nebraska</option>
-                <option value="nv">Nevada</option>
-                <option value="nh">New Hampshire</option>
-                <option value="nj">New Jersey</option>
-                <option value="nm">New Mexico</option>
-                <option value="ny">New York</option>
-                <option value="nc">North Carolina</option>
-                <option value="nd">North Dakota</option>
-                <option value="oh">Ohio</option>
-                <option value="ok">Oklahoma</option>
-                <option value="or">Oregon</option>
-                <option value="pa">Pennsylvania</option>
-                <option value="ri">Rhode Island</option>
-                <option value="sc">South Carolina</option>
-                <option value="sd">South Dakota</option>
-                <option value="tn">Tennessee</option>
-                <option value="tx">Texas</option>
-                <option value="ut">Utah</option>
-                <option value="vt">Vermont</option>
-                <option value="va">Virginia</option>
-                <option value="wa">Washington</option>
-                <option value="wv">West Virginia</option>
-                <option value="wi">Wisconsin</option>
-                <option value="wy">Wyoming</option>
-                <option value="ab">Alberta</option>
-                <option value="bc">British Columbia</option>
-                <option value="mb">Manitoba</option>
-                <option value="nb">New Brunswick</option>
-                <option value="nl">Newfoundland</option>
-                <option value="nt">Northwest Territories</option>
-                <option value="ns">Nova Scotia</option>
-                <option value="nu">Nunavut</option>
-                <option value="on">Ontario</option>
-                <option value="pe">Prince Edward Island</option>
-                <option value="qc">Quebec</option>
-                <option value="sk">Saskatchewan</option>
-                <option value="yt">Yukon</option>
-              </optgroup>
-            </select>
-          </li>
-          <li>
-            <label for="bill-zipcode">Zip/Postal-code:</label>
-            <input type="text" id="bill-zipcode" placeholder="00000" />
-          </li>
-        </ul>
-      </fieldset>
-      <fieldset id="user-phone">
-        <legend>Phone</legend>
-        <ul>
-          <li>
-            <label for="phone-type">Type:</label>
-            <select id="phone-type" name="phone-type-return">
-              <optgroup label="Type of phone">
-                <option>Mobile</option>
-                <option selected>Home</option>
-                <option>Work</option>
-              </optgroup>
-            </select>
-          </li>
-          <li>
-            <label for="phone-number">Number:</label>
-            <input type="tel" id="phone-number" placeholder="000-000-0000" />
-          </li>
-        </ul>
-      </fieldset>
-      <div id="enroll-button">
-        <ul>
-          <li>
-            <button form="enroll" type="button" id="submit-enroll">SEND ENROLLMENT</button>
-          </li>
-        </ul>
-      </div>
-    </form>
+              <label for="username">Username (email address):</label>
+              <input type="email" id="username" name="username" />
+            </li>
+            <li>
+              <label for="password">Current password:</label>
+              <input type="text" id="password" name="username" />
+            </li>
+          </ul>
+        </fieldset>
+        <div class="sender">
+          <button form="login" type="button" id="submit-login">SEND LOGIN</button>
+        </div>
+      </form>
+      <form id="choose">
+        <fieldset>
+          <button form="choose" type="button" id="gologin">GO LOGIN</button>
+          <button form="choose" type="button" id="goenroll">GO ENROLL</button>
+        </fieldset>
+        <script>
+          function toggleElementDisplay (targetId) {
+            var targetBlock = document.getElementById(targetId);
+            targetBlock.style.display = ( targetBlock.style.display == 'none' ? 'block' : 'none' );
+          };
+          var button = document.getElementById('gologin');
+          button.addEventListener('click', function() {
+            toggleElementDisplay('login');
+          });
+          var button = document.getElementById('goenroll');
+          button.addEventListener('click', function() {
+            toggleElementDisplay('enroll');
+          });
+        </script>
+      </form>
+      <form id="enroll"  style="display: block;">
+        <h1>Enroll with Amtrak Guest Rewards&reg;</h1>
+        <fieldset id="user-account">
+          <legend>Define login information:</legend>
+          <ul>
+            <li>
+              <label for="user-email">Email address:</label>
+              <input type="email" id="user-email" />
+            </li>
+            <li>
+              <label for="Dpassword">Create password:</label>
+              <input type="text" id="Dpassword" />
+            </li>
+            <li>
+              <li>
+              <label for="Spassword">Repeat password:</label>
+             <input type="text" id="Spassword" />
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset id="user-name">
+          <legend>Your profile:</legend>
+          <ul>
+            <li>
+              <label for="mistress">Title:</label>
+              <select id="mistress" name="mistress-return">
+                <optgroup label="Title">
+                  <option selected>&nbsp;</option>
+                  <option>Dr.</option>
+                  <option>Miss</option>
+                  <option>Mr.</option>
+                  <option>Mrs.</option>
+                  <option>Ms.</option>
+                </optgroup>
+              </select>
+            </li>
+            <li>
+              <label for="name-first">First name:</label>
+              <input type="text" id="name-first" placeholder="Your given name" />
+            </li>
+            <li>
+              <label for="name-m">Middle init.:</label>
+              <input type="text" id="name-m" placeholder="."/>
+            </li>
+            <li>
+              <label for="name-last">Family name:</label>
+              <input type="text" id="name-last" placeholder="Your family name"/>
+            </li>
+            <li>
+              <label for="junior-senior">Suffix:</label>
+              <select id="junior-senior" name="junior-senior-return">
+                <optgroup label="Suffix">
+                  <option value="" selected>&nbsp;</option>
+                  <option value="sr">Sr.</option>
+                  <option value="jr">Jr.</option>
+                  <option value="iii">III</option>
+                  <option value="iv">IV</option>
+                </optgroup>
+              </select>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset id="user-mailing">
+          <legend>Mailing address</legend>
+          <ul>
+            <li>
+              <label for="mail-street-number">Address:</label>
+              <input type="text" id="mail-street-number" />
+            </li>
+            <li>
+              <label for="mail-unit-etc"></label>
+              <input type="text" id="mail-unit-etc" />
+            </li>
+            <li>
+              <label for="mail-city">City:</label>
+              <input type="text" id="mail-city" />
+            </li>
+            <li>
+              <label for="mail-state">State/Provence:</label>
+              <select id="mail-state" name="mail-state-return">
+                <optgroup label="State/Province">
+                  <option value="" selected>&nbsp;</option>
+                  <option value="al">Alabama</option>
+                  <option value="ak">Alaska</option>
+                  <option value="az">Arizona</option>
+                  <option value="ar">Arkansas</option>
+                  <option value="ca">California</option>
+                  <option value="co">Colorado</option>
+                  <option value="ct">Connecticut</option>
+                  <option value="de">Delaware</option>
+                  <option value="dc">District of Columbia</option>
+                  <option value="fl">Florida</option>
+                  <option value="ga">Georgia</option>
+                  <option value="hi">Hawaii</option>
+                  <option value="id">Idaho</option>
+                  <option value="il">Illinois</option>
+                  <option value="in">Indiana</option>
+                  <option value="ia">Iowa</option>
+                  <option value="ks">Kansas</option>
+                  <option value="ky">Kentucky</option>
+                  <option value="la">Louisiana</option>
+                  <option value="me">Maine</option>
+                  <option value="md">Maryland</option>
+                  <option value="ma">Massachusetts</option>
+                  <option value="mi">Michigan</option>
+                  <option value="mn">Minnesota</option>
+                  <option value="ms">Mississippi</option>
+                  <option value="mo">Missouri</option>
+                  <option value="mt">Montana</option>
+                  <option value="ne">Nebraska</option>
+                  <option value="nv">Nevada</option>
+                  <option value="nh">New Hampshire</option>
+                  <option value="nj">New Jersey</option>
+                  <option value="nm">New Mexico</option>
+                  <option value="ny">New York</option>
+                  <option value="nc">North Carolina</option>
+                  <option value="nd">North Dakota</option>
+                  <option value="oh">Ohio</option>
+                  <option value="ok">Oklahoma</option>
+                  <option value="or">Oregon</option>
+                  <option value="pa">Pennsylvania</option>
+                  <option value="ri">Rhode Island</option>
+                  <option value="sc">South Carolina</option>
+                  <option value="sd">South Dakota</option>
+                  <option value="tn">Tennessee</option>
+                  <option value="tx">Texas</option>
+                  <option value="ut">Utah</option>
+                  <option value="vt">Vermont</option>
+                  <option value="va">Virginia</option>
+                  <option value="wa">Washington</option>
+                  <option value="wv">West Virginia</option>
+                  <option value="wi">Wisconsin</option>
+                  <option value="wy">Wyoming</option>
+                  <option value="ab">Alberta</option>
+                  <option value="bc">British Columbia</option>
+                  <option value="mb">Manitoba</option>
+                  <option value="nb">New Brunswick</option>
+                  <option value="nl">Newfoundland</option>
+                  <option value="nt">Northwest Territories</option>
+                  <option value="ns">Nova Scotia</option>
+                  <option value="nu">Nunavut</option>
+                  <option value="on">Ontario</option>
+                  <option value="pe">Prince Edward Island</option>
+                  <option value="qc">Quebec</option>
+                  <option value="sk">Saskatchewan</option>
+                  <option value="yt">Yukon</option>
+                </optgroup>
+              </select>
+            </li>
+            <li>
+              <label for="mail-zipcode">Zip/Postal-code:</label>
+              <input type="text" id="mail-zipcode" placeholder="00000" />
+            </li>
+          </ul>
+        </fieldset>
+        <div id="address-checkbox">
+          <input type="checkbox" id="show-billing" checked>
+          <label for="show-billing">My billing address is the same as my mailing address.</label>
+          <script>
+            var button = document.getElementById('show-billing');
+            button.addEventListener('click', function() {
+              toggleElementDisplay('user-billing');
+            });
+          </script>
+        </div>
+        <fieldset id="user-billing" style="display: none;">
+          <legend>Billing address</legend>
+          <ul>
+            <li>
+              <label for="bill-street-number">Address:</label>
+              <input type="text" id="bill-street-number" />
+            </li>
+            <li>
+              <label for="bill-unit-etc"></label>
+              <input type="text" id="bill-unit-etc" />
+            </li>
+            <li>
+              <label for="bill-city">City:</label>
+              <input type="text" id="bill-city" />
+            </li>
+            <li>
+              <label for="bill-state">State/Provence:</label>
+              <select id="bill-state" name="bill-state-return" >
+                <optgroup label="State/Province">
+                  <option value="" selected>&nbsp;</option>
+                  <option value="al">Alabama</option>
+                  <option value="ak">Alaska</option>
+                  <option value="az">Arizona</option>
+                  <option value="ar">Arkansas</option>
+                  <option value="ca">California</option>
+                  <option value="co">Colorado</option>
+                  <option value="ct">Connecticut</option>
+                  <option value="de">Delaware</option>
+                  <option value="dc">District of Columbia</option>
+                  <option value="fl">Florida</option>
+                  <option value="ga">Georgia</option>
+                  <option value="hi">Hawaii</option>
+                  <option value="id">Idaho</option>
+                  <option value="il">Illinois</option>
+                  <option value="in">Indiana</option>
+                  <option value="ia">Iowa</option>
+                  <option value="ks">Kansas</option>
+                  <option value="ky">Kentucky</option>
+                  <option value="la">Louisiana</option>
+                  <option value="me">Maine</option>
+                  <option value="md">Maryland</option>
+                  <option value="ma">Massachusetts</option>
+                  <option value="mi">Michigan</option>
+                  <option value="mn">Minnesota</option>
+                  <option value="ms">Mississippi</option>
+                  <option value="mo">Missouri</option>
+                  <option value="mt">Montana</option>
+                  <option value="ne">Nebraska</option>
+                  <option value="nv">Nevada</option>
+                  <option value="nh">New Hampshire</option>
+                  <option value="nj">New Jersey</option>
+                  <option value="nm">New Mexico</option>
+                  <option value="ny">New York</option>
+                  <option value="nc">North Carolina</option>
+                  <option value="nd">North Dakota</option>
+                  <option value="oh">Ohio</option>
+                  <option value="ok">Oklahoma</option>
+                  <option value="or">Oregon</option>
+                  <option value="pa">Pennsylvania</option>
+                  <option value="ri">Rhode Island</option>
+                  <option value="sc">South Carolina</option>
+                  <option value="sd">South Dakota</option>
+                  <option value="tn">Tennessee</option>
+                  <option value="tx">Texas</option>
+                  <option value="ut">Utah</option>
+                  <option value="vt">Vermont</option>
+                  <option value="va">Virginia</option>
+                  <option value="wa">Washington</option>
+                  <option value="wv">West Virginia</option>
+                  <option value="wi">Wisconsin</option>
+                  <option value="wy">Wyoming</option>
+                  <option value="ab">Alberta</option>
+                  <option value="bc">British Columbia</option>
+                  <option value="mb">Manitoba</option>
+                  <option value="nb">New Brunswick</option>
+                  <option value="nl">Newfoundland</option>
+                  <option value="nt">Northwest Territories</option>
+                  <option value="ns">Nova Scotia</option>
+                  <option value="nu">Nunavut</option>
+                  <option value="on">Ontario</option>
+                  <option value="pe">Prince Edward Island</option>
+                  <option value="qc">Quebec</option>
+                  <option value="sk">Saskatchewan</option>
+                  <option value="yt">Yukon</option>
+                </optgroup>
+              </select>
+            </li>
+            <li>
+              <label for="bill-zipcode">Zip/Postal-code:</label>
+              <input type="text" id="bill-zipcode" placeholder="00000" />
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset id="user-phone">
+          <legend>Phone</legend>
+          <ul>
+            <li>
+              <label for="phone-type">Type:</label>
+              <select id="phone-type" name="phone-type-return">
+                <optgroup label="Type of phone">
+                  <option>Mobile</option>
+                  <option selected>Home</option>
+                  <option>Work</option>
+                </optgroup>
+              </select>
+            </li>
+            <li>
+              <label for="phone-number">Number:</label>
+              <input type="tel" id="phone-number" placeholder="000-000-0000" />
+            </li>
+          </ul>
+        </fieldset>
+        <div class="sender">
+          <button form="enroll" type="button" id="submit-enroll">SEND ENROLLMENT</button>
+        </div>
+      </form>
+    </main>
   </body>
-
 </html>
