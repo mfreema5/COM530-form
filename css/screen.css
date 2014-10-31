@@ -29,51 +29,41 @@ html {
 /***************************************************************************************/
 
 body {                                           /* Body - everything that's displayed */
-  font-family:  Helvetica, "Liberation Sans Narrow", Arial, sans-serif;
   background-color: rgb(173,191,204);
+  font-family: 'Istok Web', sans-serif;       /* The Amtrak site uses “Frutiger Light" */
+                           /* which is an Adobe font. “Istok Web” was recommended as a */
+                           /* replacement at «joelcrawfordsmith.com/new/font/frutiger» */
 }
 
 header {                                                  /* Header - top of page info */
-  font-family: Verdana, "Liberation Sans", Geneva, sans-serif;
-  margin-left: 1%;
-}
-header h1 {
-  font-size:   1.875em;
-  line-height: 1.333em;
-}
-header p {
-  font-size: 1.125em;
 }
 
-main {                                                     /* Main - the main content  */
+                                                           /* Main - the main content  */
+main {
+  border-bottom: 2em solid rgb(0, 66, 92);          /* bottom border to balance header */
 }
 
 
 form {
-  display: block;
   margin: 0;
   padding: 0;
   background-color: rgb(195,215,230);
 }
 
 fieldset {
-  display: block;
-  position: relative;
-  margin: 0.375em;
-  margin-top: -0.250em;   /* Negative because <legend> is riveted to <fieldset> border */
-  padding: 2em;
   background-color: rgb(217,239,255);
 }
 
 legend {
-  font-size: 1.250em;
-  line-height: 1.375em;
+  font-size: 1.125em;
+  line-height: 1.250em;
   position: relative;
   top: 0.875em;                                    /* line-height × (2/3), and rounded */
 }
 
 label {
-  display: inline-block;
+  font-family: Arial, sans-serif;             /* Again, mirroring the use Amtrak site  */
+  display: inline-block;                      /* which uses Arial extensively, AFAICT. */
   font-size: 1.000em;
 }
 
@@ -87,21 +77,9 @@ label {
 #user-stations label { width: 11em; }
 
 
-form#login {
-  display: block;
-}
-
 ul.li {
   list-style-type: none;
   line-height: 80%;
-}
-
-input {
-  display: inline-block;
-}
-
-select {
-  display: inline-block;
 }
 
 
@@ -116,25 +94,96 @@ select {
 /***************************************************************************************/
                                                                     /* Default layouts */
 
+header {                                                  /* Header - top of page info */
+  background-color: rgb(0, 66, 92);  /* taken from www.amtrakguestrewards.com */
+  min-height: 2em ;         /* logo image instead of text */
+  background-image: url("img/logo-core.svg");
+  background-origin: content-box;
+  background-clip: border-box;
+  background-position: top 0.125em left 0.375em;
+  background-size: 10% auto;
+  background-repeat: no-repeat;
+}
+
+
+
+fieldset {
+  display: block;
+  position: relative;
+  margin: 0.250em;
+  margin-top: -0.250em;                       /* Negative because <legend> is RIVETED… */
+  padding: 2em 0.250em 1em 0.125em;                           /* …to <fieldset> border */
+  background-color: rgb(217,239,255);
+}
+
+#choose fieldset {                /* Now I know why most people hide <legend> elements */
+  margin-top: 0.250em;                      /* The previous <legend>-induced hack has… */
+  padding: 0em 0.250em 0em 0.250em;                   /* …to be undone with more hacks */
+}
+
+
+input {
+  display: inline-block;
+}
+
+select {
+  display: inline-block;
+}
+
+
+#choose button {
+  min-width: 8em;
+}
+
+#address-checkbox {
+  margin-left: 1em;                            /* Twice the pad+margin to field labels */
+}
+
+div.sender {
+  display: block;
+  margin: 0.250em;
+  padding: 1em 0.250em 1em 0.125em;
+  background-color: rgb(217,239,255);
+}
+
+
+
 
 /***************************************************************************************/
                                                                     /* screen < 48 em */
 @media all and ( max-width: 48em ) {
-}
 
+  #choose button {
+    display: block;
+    margin: 1.25em 0.125em 1.25em 5%;
+  }
+
+}
 /***************************************************************************************/
                                                              /* 48 em < screen < 64 em */
-@media all and ( max-width: 64em ) {
+@media all and ( min-width: 48em ) {
+
+  #choose button {
+    display: in-line block;
+    margin: 1.250em 5% 1.250em 5%;
+  }
+
 }
 
 /***************************************************************************************/
                                                                      /* 64 em < screen */
 @media all and ( min-width: 64em ) {
+
+  #choose button {
+    display: in-line block;
+    margin: 1.250em 5% 1.250em 5%;
+  }
+
 }
 
 /***************************************************************************************/
-          /* There's a BASH script at ~/src/Em-length.sh for calculating label widths. */
-
+/* Footnote:                                                                           */
+/*           There's a BASH script at ~/src/Em-length.sh for calculating label widths. */
 /***************************************************************************************/
                                                          /*    Reference for colors    */
                                                          /*     20% - rgb(43,48,51)    */
