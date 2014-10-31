@@ -13,34 +13,60 @@
   </head>
   <body>
     <form id="login">
+      <h1>Amtrak Guest Rewards&reg;</h1>
+      <fieldset id="userpass">
+        <legend>Log in to your existing account:</legend>
+        <ul>
+          <li>
+            <label for="username">Username (email address):</label>
+            <input type="email" id="username" name="username" />
+          </li>
+          <li>
+            <label for="password">Current password:</label>
+            <input type="text" id="password" name="username" />
+          </li>
+        </ul>
+      </fieldset>
+      <div id="enroll-button">
+        <ul>
+          <li>
+            <button form="userpass" action="submit" type="button" id="login">LOGIN</button>
+          </li>
+        </ul>
+      </div>
+    </form>
+    <form id="choose">
+      <ul>
+        <li>
+          <button form="choose" action="" type="button" id="gologin">GO TO LOGIN</button>
+        </li>
+        <li>
+          <button form="choose" action="" type="button" id="goenroll">GO TO ENROLL</button>
+        </li>
+      </ul>
     </form>
     <form id="enroll">
+      <h1>Enroll with Amtrak Guest Rewards&reg;</h1>
       <fieldset id="user-account">
-      <legend>Define login information:</legend>
+        <legend>Define login information:</legend>
         <ul>
+          <li>
+            <label for="user-email">Email address:</label>
+            <input type="email" id="user-email" />
+          </li>
+          <li>
+            <label for="Dpassword">Create password:</label>
+            <input type="text" id="Dpassword" />
+          </li>
+          <li>
             <li>
-              <label for="user-email">Email address:</label>
-              <input type="email" id="user-email" />
-            </li>
-            <checkbox />
-            </li>
-            <checkbox />
-            </li>
-            <checkbox />
-            </li>
-            <li>
-              <label for="Dpassword">Create password:</label>
-              <input type="text" id="Dpassword" />
-            </li>
-            <li>
-              <li>
-              <label for="Spassword">Repeat password:</label>
-             <input type="text" id="Spassword" />
+            <label for="Spassword">Repeat password:</label>
+           <input type="text" id="Spassword" />
           </li>
         </ul>
       </fieldset>
       <fieldset id="user-name">
-      <legend>Your profile:</legend>
+        <legend>Your profile:</legend>
         <ul>
           <li>
             <label for="mistress">Title:</label>
@@ -56,16 +82,16 @@
             </select>
           </li>
           <li>
-            <label for="name-given">First name:</label>
-            <input type="text" id="name-given" />
+            <label for="name-first">First name:</label>
+            <input type="text" id="name-first" placeholder="Your given name" />
           </li>
           <li>
             <label for="name-m">Middle init.:</label>
-            <input type="text" id="name-m" />
+            <input type="text" id="name-m" placeholder="."/>
           </li>
           <li>
-            <label for="name-family">Family name:</label>
-            <input type="text" id="name-family" />
+            <label for="name-last">Family name:</label>
+            <input type="text" id="name-last" placeholder="Your family name"/>
           </li>
           <li>
             <label for="junior-senior">Suffix:</label>
@@ -82,7 +108,7 @@
         </ul>
       </fieldset>
       <fieldset id="user-mailing">
-      <legend>Mailing address</legend>
+        <legend>Mailing address</legend>
         <ul>
           <li>
             <label for="mail-street-number">Address:</label>
@@ -173,12 +199,12 @@
             <input type="text" id="mail-zipcode" placeholder="00000" />
           </li>
           <li>
-            <checkbox />
+            <checkbox id="show-billing" />
           </li>
         </ul>
       </fieldset>
       <fieldset id="user-billing">
-      <legend>Billing address</legend>
+        <legend>Billing address</legend>
         <ul>
           <li>
             <label for="bill-street-number">Address:</label>
@@ -194,7 +220,7 @@
           </li>
           <li>
             <label for="bill-state">State/Provence:</label>
-            <select id="bill-state" name="bill-state-return">
+            <select id="bill-state" name="bill-state-return" >
               <optgroup label="State/Province">
                 <option value="" selected>&nbsp;</option>
                 <option value="al">Alabama</option>
@@ -271,7 +297,7 @@
         </ul>
       </fieldset>
       <fieldset id="user-phone">
-      <legend>Phone</legend>
+        <legend>Phone</legend>
         <ul>
           <li>
             <label for="phone-type">Type:</label>
@@ -289,6 +315,13 @@
           </li>
         </ul>
       </fieldset>
+      <div id="enroll-button">
+        <ul>
+          <li>
+            <button form="enroll" action="submit" type="button" id="enroll">ENROLL</button>
+          </li>
+        </ul>
+      </div>
     </form>
   </body>
 
