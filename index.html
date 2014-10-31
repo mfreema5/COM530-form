@@ -27,10 +27,10 @@
           </li>
         </ul>
       </fieldset>
-      <div id="enroll-button">
+      <div id="login-button">
         <ul>
           <li>
-            <button form="userpass" action="submit" type="button" id="login">LOGIN</button>
+            <button form="login" type="button" id="submit-login">SEND LOGIN</button>
           </li>
         </ul>
       </div>
@@ -38,10 +38,15 @@
     <form id="choose">
       <ul>
         <li>
-          <button form="choose" action="" type="button" id="gologin">GO TO LOGIN</button>
+          <button form="choose" type="button" id="gologin">GO TO LOGIN</button>
+          <script>
+            $( "#gologin" ).click(function() {
+              $( "#login" ).toggle();
+            });
+          </script>
         </li>
         <li>
-          <button form="choose" action="" type="button" id="goenroll">GO TO ENROLL</button>
+          <button form="choose" type="button" id="goenroll">GO TO ENROLL</button>
         </li>
       </ul>
     </form>
@@ -198,11 +203,11 @@
             <label for="mail-zipcode">Zip/Postal-code:</label>
             <input type="text" id="mail-zipcode" placeholder="00000" />
           </li>
-          <li>
-            <checkbox id="show-billing" />
-          </li>
         </ul>
       </fieldset>
+      <div id="address-checkbox">
+        <input type="checkbox" id="show-billing" name="show-billing" value="" checked>My billing address is the same as my mailing address.
+      </div>
       <fieldset id="user-billing">
         <legend>Billing address</legend>
         <ul>
@@ -318,7 +323,7 @@
       <div id="enroll-button">
         <ul>
           <li>
-            <button form="enroll" action="submit" type="button" id="enroll">ENROLL</button>
+            <button form="enroll" type="button" id="submit-enroll">SEND ENROLLMENT</button>
           </li>
         </ul>
       </div>

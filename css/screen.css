@@ -87,8 +87,9 @@ label {
 #user-stations label { width: 11em; }
 
 
-
-
+form#login {
+  display: none;
+}
 
 ul.li {
   list-style-type: none;
