@@ -12,7 +12,7 @@
     <script src="css/modernizr.custom.99475.js"></script>
   </head>
   <body>
-    <form id="login">
+    <form id="login" style="display: block;">
       <h1>Amtrak Guest Rewards&reg;</h1>
       <fieldset id="userpass">
         <legend>Log in to your existing account:</legend>
@@ -38,19 +38,20 @@
     <form id="choose">
       <ul>
         <li>
-          <button form="choose" type="button" id="gologin">GO TO LOGIN</button>
-          <script>
-            $( "#gologin" ).click(function() {
-              $( "#login" ).toggle();
-            });
-          </script>
+          <button form="choose" type="button" onclick="toggleElementDisplay('login');" id="gologin">GO TO LOGIN</button>
         </li>
         <li>
-          <button form="choose" type="button" id="goenroll">GO TO ENROLL</button>
+          <button form="choose" type="button" onclick="toggleElementDisplay('enroll');" id="goenroll">GO TO ENROLL</button>
         </li>
       </ul>
+      <script>
+        function toggleElementDisplay (targetId) {
+          var targetBlock = document.getElementById(targetId);
+          targetBlock.style.display = ( targetBlock.style.display == 'none' ? 'block' : 'none' );
+        };
+      </script>
     </form>
-    <form id="enroll">
+    <form id="enroll"  style="display: none;">
       <h1>Enroll with Amtrak Guest Rewards&reg;</h1>
       <fieldset id="user-account">
         <legend>Define login information:</legend>
