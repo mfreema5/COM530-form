@@ -77,7 +77,7 @@ label {
   font-size: 1.000em;
 }
 
-                                            /* Lining things up */
+                                        /* Lining things up * See footnote about calcs*/
 #user-account label  { width: 10em; }
 #user-name label     { width:  7em; }
 #user-mailing label  { width:  9em; }
@@ -131,7 +131,9 @@ select {
 }
 
 /***************************************************************************************/
+          /* There's a BASH script at ~/src/Em-length.sh for calculating label widths. */
 
+/***************************************************************************************/
                                                          /*    Reference for colors    */
                                                          /*     20% - rgb(43,48,51)    */
                                                          /*     40% - rgb(87,96,102)   */
@@ -139,4 +141,3 @@ select {
                                                          /*     80% - rgb(173,191,204) */
                                                          /*     90% - rgb(195,215,230) */
                                                          /*    100% - rgb(217,239,255) */
-
