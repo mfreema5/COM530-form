@@ -8,13 +8,13 @@
     <link rel="stylesheet" media="screen,print" href="css/reset.css" />
     <link rel="stylesheet" href="css/formalize.css" />
     <link rel="stylesheet" href="css/screen.css" />
-    <link href='http://fonts.googleapis.com/css?family=Istok+Web&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Istok+Web:400,700' rel='stylesheet' type='text/css' />
     <script src="css/modernizr.custom.99475.js"></script>
   </head>
   <body>
-    <header></header>
+    <header><!--logo as background image--></header>
     <main>
-      <form id="login" style="display: block;">
+      <form id="login" action="" method="post" style="display: none;">
         <fieldset id="userpass">
           <legend>Log in to your existing account:</legend>
           <ul>
@@ -24,7 +24,7 @@
             </li>
             <li>
               <label for="password">Current password:</label>
-              <input type="text" id="password" name="username" />
+              <input type="text" id="password" name="password" autocomplete="off" />
             </li>
           </ul>
         </fieldset>
@@ -32,8 +32,8 @@
           <button form="login" type="button" id="submit-login">SEND LOGIN</button>
         </div>
       </form>
-      <form id="choose">
-        <fieldset>
+      <form id="choose"><!-- Not really a form, but simplifies CSS to treat it as one -->
+        <fieldset id="toggles">
           <button form="choose" type="button" id="gologin">GO LOGIN</button>
           <button form="choose" type="button" id="goenroll">GO ENROLL</button>
         </fieldset>
@@ -52,7 +52,7 @@
           });
         </script>
       </form>
-      <form id="enroll"  style="display: block;">
+      <form id="enroll" autocomplete="on" action="" method="post" style="display: none;">
         <h1>Enroll with Amtrak Guest Rewards&reg;</h1>
         <fieldset id="user-account">
           <legend>Define login information:</legend>
